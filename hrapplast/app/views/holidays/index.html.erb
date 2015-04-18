@@ -1,0 +1,8 @@
+
+<% @holidays.each do |holiday| %>
+   <div><%= holiday.date %>
+    <%= holiday.duration %>
+    <%= link_to 'delete', holiday, confirm: 'Are you sure?', method: :delete %>
+	</div>			
+<% end %>
+

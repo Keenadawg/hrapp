@@ -1,0 +1,19 @@
+<%= form_for @holiday do |f| %>
+  <% if @holiday.errors.any? %>
+    <% for message in @holiday.errors.full_messages %>
+        <%= message %>
+    <% end %>
+  <% end %>
+   <div>
+    <%= f.label :date %>
+    <%= f.text_field :date, class: "textInput" %>
+  </div>
+  <div>
+    <%= f.label :duration %>
+    <%= f.text_field :duration, class: "textInput" %>
+  </div>
+  
+  <div><%= f.submit "send request", class: "button" %></div>
+<% end %>
+
+

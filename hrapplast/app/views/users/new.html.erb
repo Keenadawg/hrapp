@@ -4,15 +4,19 @@
         <%= message %>
     <% end %>
   <% end %>
+   <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "textInput" %>
+  </div>
   <div>
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "textInput" %>
   </div>
   <div>
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, class: "textInput" %>
   </div>
   
-  <div><%= f.submit %></div>
+  <div><%= f.submit "create account", class: "button" %></div>
 <% end %>
 
